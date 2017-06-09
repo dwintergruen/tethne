@@ -9,7 +9,7 @@ from tethne import Corpus, FeatureSet, StructuredFeatureSet, StreamingCorpus
 def _generate_graph(graph_class, pairs, node_attrs={}, edge_attrs={},
                     min_weight=1):
     graph = graph_class()
-    for combo, count in pairs.iteritems():
+    for combo, count in list(pairs.items()):
         if count >= min_weight:
             if combo in edge_attrs:
                 attrs = edge_attrs[combo]
@@ -17,7 +17,7 @@ def _generate_graph(graph_class, pairs, node_attrs={}, edge_attrs={},
                 attrs = {}
             graph.add_edge(combo[0], combo[1], weight=count, **attrs)
 
-    for k, attrs in node_attrs.iteritems():
+    for k, attrs in list(node_attrs.items()):
         if k in graph.node:
             graph.node[k].update(attrs)
     return graph
@@ -38,19 +38,19 @@ def _get_featureset(corpus_or_featureset, featureset_name):
 
 def cooccurrence(corpus_or_featureset, featureset_name=None, min_weight=1,
                  edge_attrs=['ayjid', 'date'],
-                 filter=None):
+                 flt=None):
     """
     A network of feature elements linked by their joint occurrence in papers.
     """
 
-    if not filter:
-        filter = lambda f, v, c, dc: dc >= min_weight
+    if not flt:
+        flt = lambda f, v, c, dc: dc >= min_weight
 
     featureset = _get_featureset(corpus_or_featureset, featureset_name)
 
     if type(corpus_or_featureset) in [Corpus, StreamingCorpus]:
         attributes = {i: {a: corpus_or_featureset.indices_lookup[i][a] for a in edge_attrs}
-                      for i in corpus_or_featureset.indexed_papers.keys()}
+                      for i in list(corpus_or_featureset.indexed_papers.keys())}
 
     c = lambda f: featureset.count(f)           # Overall count.
     dc = lambda f: featureset.documentCount(f)  # Document count.
@@ -61,21 +61,23 @@ def cooccurrence(corpus_or_featureset, featureset_name=None, min_weight=1,
     #  the manner in which the count for an element in each (Structured)Feature.
     if type(featureset) is FeatureSet:
         select = lambda feature: [f for f, v in feature
-                                  if filter(f, v, c(f), dc(f))]
+                                  if flt(f, v, c(f), dc(f))]
     elif type(featureset) is StructuredFeatureSet:
         select = lambda feature: [f for f in feature
-                                  if filter(f, feature.count(f), c(f), dc(f))]
+                                  if list(flt(f, feature.count(f), c(f), dc(f)))]
 
     pairs = Counter()
     eattrs = defaultdict(dict)
     nattrs = defaultdict(dict)
     nset = set()
 
-    for paper, feature in featureset.iteritems():
+    for paper, feature in list(featureset.items()):
         if len(feature) == 0:
             continue
 
+        
         selected = select(feature)
+       
         nset |= set(selected)
         for combo in combinations(selected, 2):
             combo = tuple(sorted(combo))
@@ -108,17 +110,17 @@ def coupling(corpus_or_featureset, featureset_name=None,
     f = lambda elem: featureset.index[elem]
     v = lambda p, f: featureset.features[p].value(f)
 
-    select = lambda p, elem: filter(f(elem), v(p, f(elem)), c(f(elem)), dc(f(elem)))
+    select = lambda p, elem: list(filter(f(elem), v(p, f(elem)), c(f(elem)), dc(f(elem))))
 
     pairs = defaultdict(list)
-    for elem, papers in featureset.with_feature.iteritems():
+    for elem, papers in list(featureset.with_feature.items()):
         selected = [p for p in papers if select(p, elem)]
         for combo in combinations(selected, 2):
             combo = tuple(sorted(combo))
             pairs[combo].append(featureset.index[elem])
 
     graph = nx.Graph()
-    for combo, features in pairs.iteritems():
+    for combo, features in list(pairs.items()):
         count = len(features)
         if count >= min_weight:
             graph.add_edge(combo[0], combo[1], features=features, weight=count)
@@ -152,7 +154,7 @@ def multipartite(corpus, featureset_names, min_weight=1, filters={}):
         ftypes = {}
 
         featureset = _get_featureset(corpus, featureset_name)
-        for paper, feature in featureset.iteritems():
+        for paper, feature in list(featureset.items()):
             if featureset_name in filters:
                 if not filters[featureset_name](featureset, feature):
                     continue

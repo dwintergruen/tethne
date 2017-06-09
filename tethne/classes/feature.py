@@ -19,14 +19,14 @@ logger = logging.getLogger('feature')
 logger.setLevel('WARNING')
 
 
-from itertools import chain, izip
+from itertools import chain
 from collections import Counter, defaultdict
 
 import sys
 PYTHON_3 = sys.version_info[0] == 3
 if PYTHON_3:
     xrange = range
-    unicode = str
+    str = str
 
 
 class StructuredFeature(list):
@@ -80,7 +80,7 @@ class StructuredFeature(list):
         if type(selector) is int:
             return super(StructuredFeature, self).__getitem__(selector)
 
-        if type(selector) in [str, unicode]:
+        if type(selector) in [str, str]:
             if selector in self.contexts:
                 return self.context_chunks(selector)
         elif type(selector) is tuple:
@@ -103,7 +103,7 @@ class StructuredFeature(list):
         """
         N_chunks = len(self.contexts[context])
         chunks = []
-        for j in xrange(N_chunks):
+        for j in range(N_chunks):
             chunks.append(self.context_chunk(context, j))
         return chunks
 
@@ -130,13 +130,13 @@ class StructuredFeature(list):
             end = len(self)
         else:
             end = self.contexts[context][j+1]
-        return [self[i] for i in xrange(start, end)]
+        return [self[i] for i in range(start, end)]
 
     def _validate_context(self, context):
         try:
             assert hasattr(context, '__iter__')
             assert len(context) == 2
-            assert type(context[0]) in [str, unicode]
+            assert type(context[0]) in [str, str]
             assert hasattr(context[1], '__iter__')
             assert type(context[1][0]) is int
         except AssertionError:
@@ -245,16 +245,16 @@ class Feature(list):
 
     def __add__(self, data):
         if len(data) > 0:
-            if type(data[0]) is tuple and type(data[0][-1]) not in [unicode, str]:
+            if type(data[0]) is tuple and type(data[0][-1]) not in [str, str]:
                 # There may be overlap with existing features,
                 combined_data = defaultdict(type(data[0][-1]))
                 for k, v in data + list(self):
                     combined_data[k] += v
-                return combined_data.items()
+                return list(combined_data.items())
             else:   # Recurses.
                 c = Counter(_iterable(data))
                 keys = list(c.keys())
-                return self.__add__(list(zip(keys, c.values())))
+                return self.__add__(list(zip(keys, list(c.values()))))
         return self
 
     def __sub__(self, data):
@@ -331,7 +331,7 @@ class BaseFeatureSet(object):
     def __init__(self, features={}):
         self._setUp()
 
-        for paper, feature in features.iteritems():
+        for paper, feature in list(features.items()):
             self.add(paper, feature)
 
     def _setUp(self):
@@ -347,17 +347,17 @@ class BaseFeatureSet(object):
             return self.features[key]
         except KeyError as E:
             if type(key) is int:
-                return self.features.values()[key]
+                return list(self.features.values())[key]
             raise E
 
     def __len__(self):
         return len(self.features)
 
     def items(self):
-        return self.features.items()
+        return list(self.features.items())
 
     def iteritems(self):
-        return self.features.iteritems()
+        return iter(list(self.features.items()))
 
     @property
     def unique(self):
@@ -375,11 +375,11 @@ class BaseFeatureSet(object):
         return len(self.features)
 
     def count(self, elem):
-        logger.debug(u'Get count for {0}'.format(elem))
+        logger.debug('Get count for {0}'.format(elem))
         if elem in self.lookup:
             i = self.lookup[elem]
             count = self.counts[i]
-            logger.debug(u'Found elem %s with index %i and count %f' % (elem, i, count))
+            logger.debug('Found elem %s with index %i and count %f' % (elem, i, count))
             return count
         else:
             return 0.
@@ -404,7 +404,7 @@ class BaseFeatureSet(object):
             return
 
         if type(feature[0]) is not tuple:
-            feature = Counter(feature).items()
+            feature = list(Counter(feature).items())
 
         for elem, value in feature:
             i = self.lookup.get(elem, len(self.lookup))
@@ -452,7 +452,7 @@ class StructuredFeatureSet(BaseFeatureSet):
 
     def transform(self, func):
         features = {}
-        for i, feature in self.features.iteritems():
+        for i, feature in list(self.features.items()):
             feature_ = []
             for f in feature:
                 t = self.lookup[f]
@@ -485,12 +485,12 @@ class StructuredFeatureSet(BaseFeatureSet):
 
         chunks = []
         papers = []
-        for paper, feature in self.features.iteritems():
+        for paper, feature in list(self.features.items()):
             if context in feature.contexts:
                 new_chunks = feature.context_chunks(context)
             else:
                 new_chunks = [list(feature)]
-            indices = range(len(chunks), len(chunks) + len(new_chunks))
+            indices = list(range(len(chunks), len(chunks) + len(new_chunks)))
             papers.append((paper, indices))
             chunks += new_chunks
         return papers, chunks
@@ -537,7 +537,7 @@ class StructuredFeatureSet(BaseFeatureSet):
         """
         if raw:
             return self.context_chunks(context)[1], None
-        return [[(self.lookup[term], count) for term, count in Counter(chunk).items()] for chunk in self.context_chunks(context)[1]], self.index
+        return [[(self.lookup[term], count) for term, count in list(Counter(chunk).items())] for chunk in self.context_chunks(context)[1]], self.index
 
 
 
@@ -552,17 +552,17 @@ class FeatureSet(BaseFeatureSet):
             features = dict()
         self._setUp()
 
-        logger.debug(u'Initialize FeatureSet with %i features' % len(features))
+        logger.debug('Initialize FeatureSet with %i features' % len(features))
         self.features = features
-        allfeatures = [v for v in chain(*features.values())]
+        allfeatures = [v for v in chain(*list(features.values()))]
         logger.debug('features: {0}; allfeatures: {1}'.format(len(features), len(allfeatures)))
         if len(features) > 0 and len(allfeatures) > 0:
-            allfeatures_keys = zip(*allfeatures)[0]
+            allfeatures_keys = list(zip(*allfeatures))[0]
 
             for i, elem in enumerate(set(allfeatures_keys)):
                 self.index[i] = elem
                 self.lookup[elem] = i
-                logger.debug(u'Add feature {0} with index {1}'.format(elem, i))
+                logger.debug('Add feature {0} with index {1}'.format(elem, i))
 
             self.counts = defaultdict(float)
             for elem, v in allfeatures:
@@ -573,9 +573,9 @@ class FeatureSet(BaseFeatureSet):
                                            in allfeatures_keys])
 
             self.with_feature = defaultdict(list)
-            for paper_id, counts in features.iteritems():
+            for paper_id, counts in list(features.items()):
                 try:
-                    for elem in zip(*counts)[0]:
+                    for elem in list(zip(*counts))[0]:
                         i = self.lookup[elem]
                         self.with_feature[i].append(paper_id)
                 except IndexError:    # A Paper may not have any features.
@@ -615,7 +615,7 @@ class FeatureSet(BaseFeatureSet):
 
         """
         features = {}
-        for i, feature in self.features.iteritems():
+        for i, feature in list(self.features.items()):
             feature_ = []
             for f, v in feature:
                 t = self.lookup[f]
@@ -628,7 +628,7 @@ class FeatureSet(BaseFeatureSet):
 
     def translate(self, func):
         features = {}
-        for i, feature in self.features.iteritems():
+        for i, feature in list(self.features.items()):
             features_ = []
             for f, v in feature:
                 t = self.lookup[f]
@@ -642,8 +642,8 @@ class FeatureSet(BaseFeatureSet):
         """
 
         """
-        matrix = [[0. for e in xrange(self.N_features)]
-                  for i in xrange(self.N_documents)]
+        matrix = [[0. for e in range(self.N_features)]
+                  for i in range(self.N_documents)]
         for i, p in enumerate(self.features.keys()):
             f = self.features[p]
             for e, c in f:
@@ -653,7 +653,7 @@ class FeatureSet(BaseFeatureSet):
         return matrix
 
     def as_vector(self, p, norm=False):
-        m = len(self.index.keys())
+        m = len(list(self.index.keys()))
 
         if norm:
             values = dict(self.features[p].norm)
@@ -661,7 +661,7 @@ class FeatureSet(BaseFeatureSet):
             values = dict(self.features[p])
 
         vect = []
-        for i in xrange(m):
+        for i in range(m):
             e = self.index[i]
             if e in values:
                 c = 1.*values[e]
@@ -714,9 +714,9 @@ class FeatureSet(BaseFeatureSet):
         if raw:
             return [[token for term, count in document
                      for token in repeat(term, count)]
-                    for document in self.features.values()], None
+                    for document in list(self.features.values())], None
         return [[(self.lookup[term], count) for term, count in document]
-                for document in self.features.values()], self.index
+                for document in list(self.features.values())], self.index
 
 
 def feature(f):

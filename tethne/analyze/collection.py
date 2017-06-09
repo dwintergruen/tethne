@@ -13,7 +13,7 @@ Methods for analyzing :class:`.GraphCollection`\s.
 """
 
 import networkx
-import graph
+from . import graph
 import warnings
 from collections import defaultdict, Counter
 
@@ -181,5 +181,5 @@ def attachment_probability(G, raw=False):
 
     if raw:
         return attach
-    return {key: {G.node_index[node]: prob for node, prob in values.iteritems()}
-            for key, values in attach.iteritems()}
+    return {key: {G.node_index[node]: prob for node, prob in list(values.items())}
+            for key, values in list(attach.items())}

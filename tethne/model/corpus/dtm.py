@@ -88,7 +88,7 @@ def _to_dtm_input(corpus, target, featureset_name, fields=['date','atitle'],
             multFile.write(' '.join([wordcount] + mdat) + '\n')
 
             # Write metadata.
-            meta = [ident] + [unicode(getattr(paper, f, u'')) for f in fields]
+            meta = [ident] + [str(getattr(paper, f, '')) for f in fields]
             metaFile.write('\t'.join(meta) + '\n')
 
     metaFile.close()
@@ -255,7 +255,7 @@ class DTMModel(Model):
         self.W = self.phi.shape[1]    # Number of words.
         self.T = self.phi.shape[2]    # Number of time periods.
 
-        self.lookup = {v['id']:k for k,v in self.metadata.iteritems()}
+        self.lookup = {v['id']:k for k,v in list(self.metadata.items())}
 
     def _item_description(self, i, **kwargs):
         """
@@ -263,7 +263,7 @@ class DTMModel(Model):
         """
 
         return [ (k, self.e_theta[k, i])
-                    for k in xrange(self.e_theta[:, i].size) ]
+                    for k in range(self.e_theta[:, i].size) ]
 
     def _dimension_description(self, k, t=0, **kwargs):
         """
@@ -271,7 +271,7 @@ class DTMModel(Model):
         """
 
         return [ (w, self.phi[k, w, t])
-                    for w in xrange(self.phi[k, :, t].size) ]
+                    for w in range(self.phi[k, :, t].size) ]
 
     def _dimension_items(self, k, threshold, **kwargs):
         """
@@ -291,7 +291,7 @@ class DTMModel(Model):
         """
 
         description = [ (self.metadata[i]['id'], self.e_theta[k,i])
-                            for i in xrange(self.e_theta[k,:].size)
+                            for i in range(self.e_theta[k,:].size)
                             if self.e_theta[k,i] >= threshold ]
         return description
 
@@ -313,7 +313,7 @@ class DTMModel(Model):
             Array of p(w|t) for Nwords for each time-period.
         """
 
-        t_keys = range(self.T)
+        t_keys = list(range(self.T))
         t_values = defaultdict(dict)
         for t in t_keys:
             dim = self.dimension(k, t=t, top=Nwords)
@@ -321,7 +321,7 @@ class DTMModel(Model):
                 t_values[w][t] = p
 
         t_series = defaultdict(list)
-        for w, values in t_values.iteritems():
+        for w, values in list(t_values.items()):
             word = self.vocabulary[w]
             for t in t_keys:
                 t_series[word].append(values[t] if t in values else 0.)
@@ -352,16 +352,16 @@ class DTMModel(Model):
         return [self.vocabulary[w] for w, p in words]
 
     def list_topic_diachronic(self, k, Nwords=10):
-        return {t: self.list_topic(k, t, Nwords) for t in xrange(self.T)}
+        return {t: self.list_topic(k, t, Nwords) for t in range(self.T)}
 
     def print_topic_diachronic(self, k, Nwords=10):
         as_dict = self.list_topic_diachronic(k, Nwords)
         s = []
-        for key, value in as_dict.iteritems():
+        for key, value in list(as_dict.items()):
             s.append('{0}: {1}'.format(key, ', '.join(value)))
         as_string = '\n'.join(s)
 
-        print as_string
+        print(as_string)
 
     def print_topic(self, k, t, Nwords=10):
         """
@@ -378,7 +378,7 @@ class DTMModel(Model):
 
         """
 
-        print u', '.join(self.list_topic(k, t=t, Nwords=Nwords))
+        print((', '.join(self.list_topic(k, t=t, Nwords=Nwords))))
 
     def list_topics(self, t, Nwords=10):
         """
@@ -397,7 +397,7 @@ class DTMModel(Model):
             Keys are topic indices, values are list of words.
         """
 
-        return {k: self.list_topic(k, t, Nwords) for k in xrange(self.Z)}
+        return {k: self.list_topic(k, t, Nwords) for k in range(self.Z)}
 
     def print_topics(self, t, Nwords=10):
         """
@@ -417,9 +417,9 @@ class DTMModel(Model):
         """
 
 
-        print u'\n'.join([u'{0}: {1}'.format(key, u', '.join(value))
+        print(('\n'.join(['{0}: {1}'.format(key, ', '.join(value))
                           for key, value
-                          in self.list_topics(t, Nwords).iteritems()])
+                          in list(self.list_topics(t, Nwords).items())])))
 
     def item(self, i, top=None, **kwargs):
         """
@@ -450,7 +450,7 @@ class DTMModel(Model):
 
         # Optionally, select only the top-weighted dimensions.
         if type(top) is int:
-            D, W = zip(*description) # Dimensions and Weights.
+            D, W = list(zip(*description)) # Dimensions and Weights.
             D = list(D)     # To support element deletion, below.
             W = list(W)
             top_description = []
@@ -511,7 +511,7 @@ class DTMModel(Model):
 
         # Optionally, select only the top-weighted dimensions.
         if type(top) is int:
-            D, W = zip(*description) # Dimensions and Weights.
+            D, W = list(zip(*description)) # Dimensions and Weights.
             D = list(D)     # To support element deletion, below.
             W = list(W)
             top_description = []
@@ -523,8 +523,8 @@ class DTMModel(Model):
             description = top_description
 
         if asmatrix:
-            J,K = zip(*description)
-            I = [ d for i in xrange(len(J)) ]
+            J,K = list(zip(*description))
+            I = [ d for i in range(len(J)) ]
             mat = coo_matrix(list(K), (I,list(J))).tocsc()
             return mat
 
@@ -708,7 +708,7 @@ class GerrishLoader(object):
             self.N_d = data.shape[0]/self.N_z
             b = data.reshape((self.N_d, self.N_z)).astype('float32')
             rs = np.sum(b, axis=1)
-            self.e_theta = np.array([ b[:,z]/rs for z in xrange(self.N_z) ])
+            self.e_theta = np.array([ b[:,z]/rs for z in range(self.N_z) ])
 
     def _handle_prob(self, fname, z):
         """
@@ -756,7 +756,7 @@ class GerrishLoader(object):
 
             i = 0
             for l in lines:
-                self.metadata[i] = { keys[i]:l[i] for i in xrange(0, len(l)) }
+                self.metadata[i] = { keys[i]:l[i] for i in range(0, len(l)) }
                 if 'id' not in self.metadata[i]:
                     self.metadata[i]['id'] = i
                 i += 1

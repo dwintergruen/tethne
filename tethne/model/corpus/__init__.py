@@ -46,16 +46,16 @@ class LDAMixin(object):
         """
         List the top ``Nwords`` words for each topic.
         """
-        return [(k, self.list_topic(k, Nwords)) for k in xrange(len(self.phi))]
+        return [(k, self.list_topic(k, Nwords)) for k in range(len(self.phi))]
 
 
     def print_topics(self, Nwords=10):
         """
         Print the top ``Nwords`` words for each topic.
         """
-        print('Topic\tTop %i words' % Nwords)
+        print(('Topic\tTop %i words' % Nwords))
         for k, words in self.list_topics(Nwords):
-            print(unicode(k).ljust(3) + '\t' + ' '.join(list(zip(*words))[0]))
+            print((str(k).ljust(3) + '\t' + ' '.join(list(zip(*words))[0])))
 
 
     def topic_over_time(self, k, mode='counts', slice_kwargs={}):

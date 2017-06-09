@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/"
+	xmlns:wdp="http://www.wikidata.org/prop/"
+	xmlns:Help="http://help.metaphacts.com/resource/"
+	xmlns:User="http://www.metaphacts.com/resource/user/"
+	xmlns:Platform="http://www.metaphacts.com/ontologies/platform/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:wdt="http://www.wikidata.org/prop/direct/"
+	xmlns:rdfg="http://www.w3.org/2004/03/trix/rdfg-1/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:BaseIRI="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/"
+	xmlns:sphaera="http://ontologies.mpiwg-berlin.mpg.de/sphaera/"
+	xmlns:wd="http://www.wikidata.org/entity/"
+	xmlns:oa="http://www.w3.org/ns/oa#"
+	xmlns:sp="http://spinrdf.org/sp#"
+	xmlns:crm="http://erlangen-crm.org/160714/"
+	xmlns:cnt="http://www.w3.org/2011/content#"
+	xmlns:Admin="http://www.metaphacts.com/resource/admin/"
+	xmlns:dcTEST="http://purl.org/dc/elements/1.1/"
+	xmlns:bds="http://www.bigdata.com/rdf/search#"
+	xmlns:dbo="http://dbpedia.org/ontologies/"
+	xmlns:gmpgg="http://ontologies.mpiwg-berlin.mpg.de/gmpg/graph/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ecrm="http://erlangen-crm.org/current/"
+	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/">
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/0ff174ad-659c-4631-925d-e64c2c860096">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mestmäcker</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernst-Joachim</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/1071081c-222f-4fc5-9a59-6f9b2fc3a1dd">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schultz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/13a59ea2-2e04-4b5e-b021-995b4f9e324b">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hailbronner</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kay</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/1964f402-ee07-444c-bb43-ec106d689312">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorenz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konrad Zacharias</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/1a326da4-733c-405d-8e2f-9aafb5a84d82">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lotz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolfgang</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/1d6229ee-f067-4ee1-826f-35d4f1e8591e">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbert</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giersch</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/2a01a646-e184-4739-86cc-7f56c59a11a4">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pünder</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermann Josef Maria Ernst</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/2e12aa48-656f-40eb-b4fc-5fb3244e68c0">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernholz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/34d71454-0f64-4cad-9e0a-33ce8a933b93">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klein</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eckart</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/362bb70f-903a-4232-94b2-fe6873828948">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bombach</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gottfried</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/38a82eaf-4a52-4222-ab18-cbd52d97ade6">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Möller</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jescheck</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans-Heinrich</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/42643e8f-4e33-48cb-89ab-74211e10142e">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beier</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friedrich-Karl</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/4338f1f9-84b6-4b6b-8532-e9bcbcbeea32">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heimpel</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermann</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/4341bf00-3b1a-4d4c-919a-9476049298a6">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weinert</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franz Emanuel</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/44ec8ea9-83d5-47d2-a716-919331b10143">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wekerle</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartmut</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coing</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helmut (Justus)</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/4a562962-4e72-43d8-9d46-cbd5aadd882e">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westphal</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Otto</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/51ad5da4-9f01-4c19-adaa-7aadf9d60f40">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Husén</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torsten</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/53175ba3-3a95-41c6-871a-5259deb2d929">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behrens</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/539f0839-714c-4fcd-b8d5-725a73fea4b0">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seidl-Hohenveldern</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ignaz</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drobnig</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulrich</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/5c8ae832-72e8-433a-968c-5e698143ad15">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulmer</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eugen</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/61d5ed36-c34f-46b5-ab88-e66eadabd6f2">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kegel</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerhard</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/6545f349-6e7d-42c2-a64d-4228ee4d7554">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hess</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerhard</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/6a261803-17f4-47b7-afd1-809f2ef76dd1">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bothe</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walther Wilhelm Georg Franz</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/715ad77b-5872-4ec4-acd6-74f2f9d7f9af">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roeder</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Martin</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/7ccda0c4-a840-439a-b1f5-e81c793ce681">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Becker</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hellmut</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/8a38c82f-5994-4d6d-874f-cbb8a03c788a">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kahlweit</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manfred</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/8a3cd3b3-0ab0-416a-9783-970e3ece2982">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilhelm</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/951fe30d-27df-4a23-aef8-438efc65198d">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kewenig</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilhelm Alexander</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/96362922-2840-4b07-8834-a133913f0db5">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Braitenberg</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valentino</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/a176eab6-356d-47ea-8dc3-c6860b0f873d">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eigen</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manfred</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaiser</surname>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/023d7c66-8dd8-411f-a1b0-deef29d0c49b">
+	<member rdf:resource="http://erlangen-crm.org/160714/c6854bf4-d177-47aa-a21e-747d1aa17493"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e4deeadf-f85b-4144-8ee1-934007dfc44c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/9f9639ce-5dc8-45c0-9061-2cfe803b0c1e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d86ea4a1-e2da-4614-8b2b-ce4ede90418e"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/023d7c66-8dd8-411f-a1b0-deef29d0c49b"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Zukunft des Max-Planck-Instituts für ausländisches und internationales Patent-. Urheber- und Wettbewerbsrecht</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/0357c67a-0d9c-40cb-b0b2-11ab36d31987">
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/5c8ae832-72e8-433a-968c-5e698143ad15"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/327de2d6-f4ee-4b86-b4f6-0500cdd4bb42"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/0357c67a-0d9c-40cb-b0b2-11ab36d31987"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Gründung eines Max-Planck-Instituts für Wirtschaftsrecht und Wirtschaftsordnung</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/07438d8e-25d6-48a4-86f4-f2163e596886">
+	<member rdf:resource="http://erlangen-crm.org/160714/8a3cd3b3-0ab0-416a-9783-970e3ece2982"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f463d745-d7df-4e5e-bf50-b8a5a6bc594a"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/07438d8e-25d6-48a4-86f4-f2163e596886"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berufung von Dr. Albrecht Wellmer zum WM des MPI zur Erforschung der Lebensbedingungen der wissenschaftlich-technischen Welt</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/21f252f4-b72a-4c87-b383-15745bd3a140">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/6a261803-17f4-47b7-afd1-809f2ef76dd1"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e5c76e4f-47c0-4123-8e2e-2521048004da"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/efc6282d-9781-49ae-b495-00f328217999"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f852240f-9804-4e8f-bf1f-2321b5e0a18a"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/21f252f4-b72a-4c87-b383-15745bd3a140"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission "MPI für europäische Rechtsgeschichte"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/28e6a2b5-1154-4bd4-b12f-e43f28f6cca6">
+	<member rdf:resource="http://erlangen-crm.org/160714/1d6229ee-f067-4ee1-826f-35d4f1e8591e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/6a261803-17f4-47b7-afd1-809f2ef76dd1"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e0c2ba5a-41f9-4599-a0e7-b829a57a810f"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3596ccaf-fce7-4d68-ac77-df670c1c230c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/68357f75-9703-49bb-9b8a-1cc7183c2f16"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/28e6a2b5-1154-4bd4-b12f-e43f28f6cca6"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachfolge von Prof. Edding</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/3f26b366-f024-41a8-b95e-6e4d07e17053">
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/53175ba3-3a95-41c6-871a-5259deb2d929"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/3f26b366-f024-41a8-b95e-6e4d07e17053"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zum Forschungsprojekt "Vergleichendes Privatversicherungsrecht"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/420463d8-89ec-4a68-ac5d-00dbbd42115c">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e0c2ba5a-41f9-4599-a0e7-b829a57a810f"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/420463d8-89ec-4a68-ac5d-00dbbd42115c"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission "MPI für Sozialwissenschaften"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/4ee0bc5c-3a79-4232-99b9-357463dbad44">
+	<member rdf:resource="http://erlangen-crm.org/160714/44ec8ea9-83d5-47d2-a716-919331b10143"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/b2cd1a13-adad-4b69-9025-379f09eacc6b"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/be4cd701-3546-4d2a-8d89-acb530ac479d"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/bfe0338f-8820-46d6-8346-469e3a15bd59"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c8aae10f-0d02-41fc-bd73-bdf6835da78e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/cf80c0c2-eca4-4830-ac4e-25b87c13ede4"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d18def66-7081-49ca-9669-f61b93850891"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/558e6018-469e-4564-98cb-3e037ada07c7"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/5d5489cf-e0a3-49c8-b9be-dcf5e8a2ca62"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/edd4958a-e4fe-4779-9f27-c9a78d92cf68"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/4ee0bc5c-3a79-4232-99b9-357463dbad44"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stammkommission MPI für evolutionäre Anthropologie /Berufung des fünften WM und Direktors an das Institut</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/4f1c4fc6-8f0c-47f2-8097-8a9ff2ec2d80">
+	<member rdf:resource="http://erlangen-crm.org/160714/2a01a646-e184-4739-86cc-7f56c59a11a4"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/4338f1f9-84b6-4b6b-8532-e9bcbcbeea32"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e4deeadf-f85b-4144-8ee1-934007dfc44c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/262b384e-ae79-4f15-8a43-002fc0f0a4ee"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/8e6af619-2e90-4ffa-918b-a90e16e3c4b7"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/4f1c4fc6-8f0c-47f2-8097-8a9ff2ec2d80"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senatskommission zur&#xD;
+Gründung eines Instituts für vergleichende Rechtsgeschichte</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/619b3d91-2e69-4430-8caf-6de8dbee4781">
+	<member rdf:resource="http://erlangen-crm.org/160714/4338f1f9-84b6-4b6b-8532-e9bcbcbeea32"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/6545f349-6e7d-42c2-a64d-4228ee4d7554"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f233e8f4-e530-4944-935f-2d4029ccc78c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/faecde86-feff-47ad-a93e-f8e848f7ac77"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/2c8d8271-9069-4d71-b7bd-eb9b314fc610"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/8e6af619-2e90-4ffa-918b-a90e16e3c4b7"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/619b3d91-2e69-4430-8caf-6de8dbee4781"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senatskommission zur Gründung eines Instituts für Forschungen auf dem Gebiet des Bildungswesens</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/79435ff3-58c6-4032-b8fa-b6adeb39510c">
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/79435ff3-58c6-4032-b8fa-b6adeb39510c"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd">
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Günther</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/b2cd1a13-adad-4b69-9025-379f09eacc6b">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hossmann</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konstantin-Alexander</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/b2e17b60-ae2a-4339-991a-45869e210fe4">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fillitz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermann</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/b6293bf5-4d8c-4dac-9b80-fc54ee893798">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roxin</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claus</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/bd0fc081-9b8f-498c-961d-ad64d36b3a75">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lackner</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/bd4383d6-837f-4c4d-9fc1-f45251ff8336">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albers-Schönberg</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernst</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/be4cd701-3546-4d2a-8d89-acb530ac479d">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basedow</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jürgen</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/bf4421b4-4cc2-4fcc-99cd-08571799839d">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joachim Hermann</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/bfe0338f-8820-46d6-8346-469e3a15bd59">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wickler</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolfgang</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fleckenstein</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josef</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c4ab7c04-efb9-4da8-bfee-62f331312968">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dölle</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Heinrich Leonhard</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c6854bf4-d177-47aa-a21e-747d1aa17493">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strömholm</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stig</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zweigert</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konrad</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c81570a4-a241-4445-97c2-b89e7fe40e0c">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dohrn</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klaus</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c8aae10f-0d02-41fc-bd73-bdf6835da78e">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schwarz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uli</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vierhaus</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rudolf</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/cc4f5200-91dc-4b4a-899a-f40c69600e72">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borchardt</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knut</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/cf80c0c2-eca4-4830-ac4e-25b87c13ede4">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daston</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorraine</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d18def66-7081-49ca-9669-f61b93850891">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prinz</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolfgang</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d424c465-eeef-4231-b73c-a0d891433a0b">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haerendel</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerhard</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d88c44ce-554c-4f91-b65c-8f421406e948">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bertram</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christoph</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/e0c2ba5a-41f9-4599-a0e7-b829a57a810f">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Habermas</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jürgen</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/e4deeadf-f85b-4144-8ee1-934007dfc44c">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mosler</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermann</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/e5c76e4f-47c0-4123-8e2e-2521048004da">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v. Schwind</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fritz</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/efc6282d-9781-49ae-b495-00f328217999">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaudemet</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jean</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/f099e42e-56b8-4b39-8df5-773c5e9446ab">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gamillscheg</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franz</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/f233e8f4-e530-4944-935f-2d4029ccc78c">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmid</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Carlo</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schricker</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerhard</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/f463d745-d7df-4e5e-bf50-b8a5a6bc594a">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dürr</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans-Peter Emil</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/f852240f-9804-4e8f-bf1f-2321b5e0a18a">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wieacker</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franz</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/faecde86-feff-47ad-a93e-f8e848f7ac77">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weizsäcker</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl Friedrich Freiherr von</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/fe9c82fc-9f53-4cf8-b119-7d005ba6f6ab">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldschmidt</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dietrich</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernhardt</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rudolf</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/023d7c66-8dd8-411f-a1b0-deef29d0c49b">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/79435ff3-58c6-4032-b8fa-b6adeb39510c">
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berufung von Prof. Buddensieg zum WM der Bibliotheca Hertziana</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/7b0de732-e5f6-4b23-a9c0-216357d2cf37">
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/b2e17b60-ae2a-4339-991a-45869e210fe4"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/8a5f7edb-45c6-4c5b-9e42-4c8fb2ffd80a"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/7b0de732-e5f6-4b23-a9c0-216357d2cf37"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachfolge von Prof. Lehmann-Brockhaus</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/7d4bc039-04fa-4239-af0b-eb74f11d909e">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/faecde86-feff-47ad-a93e-f8e848f7ac77"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/7d4bc039-04fa-4239-af0b-eb74f11d909e"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernennung von Herrn Prof. Dr. Becker zum wissenschaftlichen Mitglied des MPI für Bildungsforschung</dcTEST:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/866c1198-9ba7-41ea-a6cf-ab34035c5178">
+	<member rdf:resource="http://erlangen-crm.org/160714/1a326da4-733c-405d-8e2f-9aafb5a84d82"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/51ad5da4-9f01-4c19-adaa-7aadf9d60f40"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/715ad77b-5872-4ec4-acd6-74f2f9d7f9af"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/faecde86-feff-47ad-a93e-f8e848f7ac77"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/5005144f-106b-4257-8596-abcccec1bbf5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/75ad98d1-428c-4a03-a897-9dfe4f05b05a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/868b8860-8fff-48cc-954d-2191eab1a2f5"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/866c1198-9ba7-41ea-a6cf-ab34035c5178"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Umwandlung des Institus für Bildungsforschung in ein "echtes" Max-Planck-Institut</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/8a114339-7d30-48c4-807f-1db38c22ba72">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e0c2ba5a-41f9-4599-a0e7-b829a57a810f"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/8a114339-7d30-48c4-807f-1db38c22ba72"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berufung von Prof. Dr. Friedrich Edding, Prof. Dr. Dietrich Goldschmidt, Prof. Dr. Saul B. Robinsohn und Dr. Wolfgang Edelstein zu Mitgliedern des MPI für Bildungsforschung und Wissenschaftlichen Mitgliedern der MPG</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/93f6a2f2-c525-402c-bc5c-990c75c644e7">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/6a261803-17f4-47b7-afd1-809f2ef76dd1"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e5c76e4f-47c0-4123-8e2e-2521048004da"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/efc6282d-9781-49ae-b495-00f328217999"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f852240f-9804-4e8f-bf1f-2321b5e0a18a"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/93f6a2f2-c525-402c-bc5c-990c75c644e7"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachfolge von Prof. Dr. Helmut Coing</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/97b5a3a8-9828-4cb0-86fe-cf0ff8cd7f77">
+	<member rdf:resource="http://erlangen-crm.org/160714/4338f1f9-84b6-4b6b-8532-e9bcbcbeea32"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e4deeadf-f85b-4144-8ee1-934007dfc44c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/faecde86-feff-47ad-a93e-f8e848f7ac77"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/93ee7685-f75c-436b-8896-bf46444dbea7"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/97b5a3a8-9828-4cb0-86fe-cf0ff8cd7f77"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Prüfung der Voraussetzungen zur Gründung geisteswissenschaftler Forschungsinstitute im Rahmen der MPG</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1963</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/983e8b62-692d-4ba4-bb31-4cfe6bfa4d14">
+	<member rdf:resource="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/93ee7685-f75c-436b-8896-bf46444dbea7"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/983e8b62-692d-4ba4-bb31-4cfe6bfa4d14"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernennung von Prof. Dr. Theo Vogler zum Auswärtigen Wissenschaftlichen Mitglied des MPI für ausländisches und internationales Strafrecht</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/a28dd527-c14d-46c6-b5c8-15fd4937c18c">
+	<member rdf:resource="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/bd4383d6-837f-4c4d-9fc1-f45251ff8336"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/fe9c82fc-9f53-4cf8-b119-7d005ba6f6ab"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/0757281e-4401-4291-864f-57156811db84"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/08d2fe10-92ee-4d24-bcbf-5b26401a15a5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d9dcead6-23f0-450c-891b-c01d29e575d1"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/a28dd527-c14d-46c6-b5c8-15fd4937c18c"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission "Projektgruppe für internationales und vergleichendes Sozialrecht"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/a8478e01-4759-44c2-a157-8ef2431ea3f6">
+	<member rdf:resource="http://erlangen-crm.org/160714/1071081c-222f-4fc5-9a59-6f9b2fc3a1dd"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/13a59ea2-2e04-4b5e-b021-995b4f9e324b"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/42643e8f-4e33-48cb-89ab-74211e10142e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/b6293bf5-4d8c-4dac-9b80-fc54ee893798"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/bd0fc081-9b8f-498c-961d-ad64d36b3a75"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/fe9c82fc-9f53-4cf8-b119-7d005ba6f6ab"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/08d2fe10-92ee-4d24-bcbf-5b26401a15a5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/4e4f6fa0-2f8c-49fb-8aef-0a7e93aa76e7"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/a8478e01-4759-44c2-a157-8ef2431ea3f6"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Nachfolge von Prof. Dr. Jescheck/ Kommission "MPI für ausländisches und internationales Strafrecht"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/aa45e1ba-bcc6-4b90-ae8b-f822a5de1713">
+	<member rdf:resource="http://erlangen-crm.org/160714/2a01a646-e184-4739-86cc-7f56c59a11a4"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c4ab7c04-efb9-4da8-bfee-62f331312968"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c81570a4-a241-4445-97c2-b89e7fe40e0c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e4deeadf-f85b-4144-8ee1-934007dfc44c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/8e6af619-2e90-4ffa-918b-a90e16e3c4b7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/aefcada2-3ff5-4af2-a91d-c193f81a9e02">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graumann</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl Friedrich</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/b144fe1d-a900-498c-8c4b-db29b0968dc4">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moser</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jürgen</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/b79101d9-21e8-410d-8373-1de974ebcec6">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steindorff</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernst</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/c553ba2a-26f9-4b02-8705-5b8f3bc9395c">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luhmann</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niklas</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d4f21608-439f-4e29-be1c-a45e4597fd12">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schlesinger</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helmut</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d58a65f2-3993-43f5-9cac-3492976ef958">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kissinger</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d664ceb5-0cbd-4212-83c3-eef573216f5f">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Becker</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H.</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d86ea4a1-e2da-4614-8b2b-ce4ede90418e">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haertel</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kurt</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/d9dcead6-23f0-450c-891b-c01d29e575d1">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurer</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ekkehard</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/edd4958a-e4fe-4779-9f27-c9a78d92cf68">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solga</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heike</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/f42b35a9-f748-4153-b11f-f401aecdae2f">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kennan</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/1686eff9-d490-4b33-bce1-0539ac486a4c">
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/1686eff9-d490-4b33-bce1-0539ac486a4c"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Gründung eines Max-Planck-Instituts für Musik</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/aa45e1ba-bcc6-4b90-ae8b-f822a5de1713">
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/aa45e1ba-bcc6-4b90-ae8b-f822a5de1713"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senatskommission zur Erörterung von Institutsgründungen/ Umwandlung des Institutes für ausländisches und internationales Strafrecht/ Neugründung eines MPI für ausländisches und internationales Patent-, Urheber- und Wettbewerbsrecht</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1962</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/ac8eea68-6980-4bf5-8553-2f98fc1b768c">
+	<member rdf:resource="http://erlangen-crm.org/160714/42643e8f-4e33-48cb-89ab-74211e10142e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/539f0839-714c-4fcd-b8d5-725a73fea4b0"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/56b8194a-1a31-47ea-9315-bea60450687a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/715ad77b-5872-4ec4-acd6-74f2f9d7f9af"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/951fe30d-27df-4a23-aef8-438efc65198d"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/9b664310-403f-4483-8936-c9ba85c5d4b8"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/acf49f8a-e06f-4ec9-bf62-88ccda4d0b43"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/ac8eea68-6980-4bf5-8553-2f98fc1b768c"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission "Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/b9b606a2-48de-4daa-888f-6227892f0d97">
+	<member rdf:resource="http://erlangen-crm.org/160714/42643e8f-4e33-48cb-89ab-74211e10142e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/53175ba3-3a95-41c6-871a-5259deb2d929"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/7ccda0c4-a840-439a-b1f5-e81c793ce681"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/b9b606a2-48de-4daa-888f-6227892f0d97"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Errichtung eines Institutes für internationales und ausländisches Steuerrecht</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/bb517e24-e240-4897-a849-f65e0ef9df37">
+	<member rdf:resource="http://erlangen-crm.org/160714/1a326da4-733c-405d-8e2f-9aafb5a84d82"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/42643e8f-4e33-48cb-89ab-74211e10142e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/4341bf00-3b1a-4d4c-919a-9476049298a6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/51ad5da4-9f01-4c19-adaa-7aadf9d60f40"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/bf4421b4-4cc2-4fcc-99cd-08571799839d"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e0c2ba5a-41f9-4599-a0e7-b829a57a810f"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/0b13d8db-c539-4ed6-96ef-f78eac259dd7"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/1dfff1fb-0f83-4203-b630-25fc94a70b75"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3596ccaf-fce7-4d68-ac77-df670c1c230c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/7c12ca87-e65d-4944-8a4b-90466bc453a6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/aefcada2-3ff5-4af2-a91d-c193f81a9e02"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/bb517e24-e240-4897-a849-f65e0ef9df37"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission "Max-Planck-Institut für Bildungsforschung"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/d5f58df4-da0a-4bc4-b216-fb7f9b3dfdbc">
+	<member rdf:resource="http://erlangen-crm.org/160714/0ff174ad-659c-4631-925d-e64c2c860096"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/2e12aa48-656f-40eb-b4fc-5fb3244e68c0"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/34d71454-0f64-4cad-9e0a-33ce8a933b93"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/38a82eaf-4a52-4222-ab18-cbd52d97ade6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/cc4f5200-91dc-4b4a-899a-f40c69600e72"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/78ed7cbf-c81c-4cfc-a4d3-7c29bf43b18f"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d4f21608-439f-4e29-be1c-a45e4597fd12"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/d5f58df4-da0a-4bc4-b216-fb7f9b3dfdbc"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projektgruppe für weltwirtschaftliche Grundlagenforschung/ Kommission "Internationale Ökonomie"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/d75b9d23-392b-4db2-b265-45330e99d734">
+	<member rdf:resource="http://erlangen-crm.org/160714/38a82eaf-4a52-4222-ab18-cbd52d97ade6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/42643e8f-4e33-48cb-89ab-74211e10142e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/4341bf00-3b1a-4d4c-919a-9476049298a6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/53175ba3-3a95-41c6-871a-5259deb2d929"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d88c44ce-554c-4f91-b65c-8f421406e948"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c553ba2a-26f9-4b02-8705-5b8f3bc9395c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d58a65f2-3993-43f5-9cac-3492976ef958"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d664ceb5-0cbd-4212-83c3-eef573216f5f"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f42b35a9-f748-4153-b11f-f401aecdae2f"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/d75b9d23-392b-4db2-b265-45330e99d734"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission "Max-Planck-Institut zur Erforschung der Lebensbedingungen der wissenschaftlich-technischen Welt"</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/dee9824b-038f-4c3a-bf4e-535a63460762">
+	<member rdf:resource="http://erlangen-crm.org/160714/48d74aa4-7bf6-43bd-86e5-afcf295e11d6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/61d5ed36-c34f-46b5-ab88-e66eadabd6f2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/7ccda0c4-a840-439a-b1f5-e81c793ce681"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c6854bf4-d177-47aa-a21e-747d1aa17493"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/5185b042-b870-4dbd-90e4-d45c21958eb9"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/b79101d9-21e8-410d-8373-1de974ebcec6"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/dee9824b-038f-4c3a-bf4e-535a63460762"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachfolge von Prof. Konrad Zweigert</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/e1208eda-17fe-435e-8f0d-5ad503f1f695">
+	<member rdf:resource="http://erlangen-crm.org/160714/1964f402-ee07-444c-bb43-ec106d689312"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/4a562962-4e72-43d8-9d46-cbd5aadd882e"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/8a38c82f-5994-4d6d-874f-cbb8a03c788a"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/96362922-2840-4b07-8834-a133913f0db5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/a176eab6-356d-47ea-8dc3-c6860b0f873d"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/d424c465-eeef-4231-b73c-a0d891433a0b"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/e1208eda-17fe-435e-8f0d-5ad503f1f695"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intersektionelle Kommission "Musik-Institut" / MPI für Musik</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/e4fb3778-3600-4026-855e-86cf7bb63281">
+	<member rdf:resource="http://erlangen-crm.org/160714/362bb70f-903a-4232-94b2-fe6873828948"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/38a82eaf-4a52-4222-ab18-cbd52d97ade6"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3bc8c1d0-b49d-4d4c-8717-562800e45701"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/53175ba3-3a95-41c6-871a-5259deb2d929"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/c32675cb-525b-47bb-a99a-f06c9cec34e2"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/3596ccaf-fce7-4d68-ac77-df670c1c230c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/a5e29924-610b-4504-b746-6399f8b3c41c"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/b144fe1d-a900-498c-8c4b-db29b0968dc4"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/e4fb3778-3600-4026-855e-86cf7bb63281"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berufung von Prof. Dr. Lutz Hoffmann zum WM und Direktor am MPI zur Erforschung der Lebensbedingungen der wissenschaftlich-technischen Welt</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/f468a877-6f85-4f1c-a4e5-4648ad9ba630">
+	<member rdf:resource="http://erlangen-crm.org/160714/a9cd67d3-5d6b-4e16-b08b-3961d9150ebd"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ca8e5030-682e-497f-ae65-330c40265990"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/e0c2ba5a-41f9-4599-a0e7-b829a57a810f"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/f468a877-6f85-4f1c-a4e5-4648ad9ba630"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Entwicklung von Forschungsinstituten im Bereich der Sozialwissenschaften</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/f755b2c3-a023-47ae-8c0c-5325389cdb65">
+	<member rdf:resource="http://erlangen-crm.org/160714/c7a5461b-7d65-43f5-8ff3-df9696fe59f5"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f099e42e-56b8-4b39-8df5-773c5e9446ab"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/f24dc026-1838-41e5-98f7-a587b954fedf"/>
+	<member rdf:resource="http://erlangen-crm.org/160714/ff1cfb5a-e3dc-462b-a729-78584e436268"/>
+	<memberContainer rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/f755b2c3-a023-47ae-8c0c-5325389cdb65"/>
+	<rdf:type rdf:resource="http://ontologies.mpiwg-berlin.mpg.de/scholarlyRelations/Commission"/>
+	<dcTEST:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommission zur Errichtung des MPI für vergleichendes Sozialrecht</dcTEST:title>
+	<dcTEST:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</dcTEST:date>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/0757281e-4401-4291-864f-57156811db84">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomann</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rudolf</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/08d2fe10-92ee-4d24-bcbf-5b26401a15a5">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohnhaupt</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heinz</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/0b13d8db-c539-4ed6-96ef-f78eac259dd7">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krings</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermann</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/1dfff1fb-0f83-4203-b630-25fc94a70b75">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flitner</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreas</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/262b384e-ae79-4f15-8a43-002fc0f0a4ee">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Makarov</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexander</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/2c8d8271-9069-4d71-b7bd-eb9b314fc610">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wurster</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/327de2d6-f4ee-4b86-b4f6-0500cdd4bb42">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biedenkopf</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kurt Hans</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/3596ccaf-fce7-4d68-ac77-df670c1c230c">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerfin</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harald</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/4e4f6fa0-2f8c-49fb-8aef-0a7e93aa76e7">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hollerbach</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexander</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/5005144f-106b-4257-8596-abcccec1bbf5">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conant</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Bryant</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/5185b042-b870-4dbd-90e4-d45c21958eb9">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanns</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/558e6018-469e-4564-98cb-3e037ada07c7">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Levinson</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen Curtis</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/5d5489cf-e0a3-49c8-b9be-dcf5e8a2ca62">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klein</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolfgang</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/68357f75-9703-49bb-9b8a-1cc7183c2f16">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blaug</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/75ad98d1-428c-4a03-a897-9dfe4f05b05a">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schelsky</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helmut</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/78ed7cbf-c81c-4cfc-a4d3-7c29bf43b18f">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kloten</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norbert</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/7c12ca87-e65d-4944-8a4b-90466bc453a6">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schluchter</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolfgang</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/868b8860-8fff-48cc-954d-2191eab1a2f5">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egger</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E.</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/8a5f7edb-45c6-4c5b-9e42-4c8fb2ffd80a">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blunt</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/8e6af619-2e90-4ffa-918b-a90e16e3c4b7">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schreiber</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/93ee7685-f75c-436b-8896-bf46444dbea7">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doehring</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/9b664310-403f-4483-8936-c9ba85c5d4b8">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pescatore</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pierre</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/9f9639ce-5dc8-45c0-9061-2cfe803b0c1e">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krüger</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans-Joachim</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/a5e29924-610b-4504-b746-6399f8b3c41c">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edding</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friedrich Georg Peter</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://erlangen-crm.org/160714/acf49f8a-e06f-4ec9-bf62-88ccda4d0b43">
+	<surname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geck</surname>
+	<givenname xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilhelm Karl</givenname>
+	<rdf:type rdf:resource="http://erlangen-crm.org/160714/E21_Person"/>
+</rdf:Description>
+
+</rdf:RDF>

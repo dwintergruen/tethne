@@ -59,9 +59,9 @@ class GensimLDAModel(BaseGensimModel, LDAMixin):
             Rows are documents, columns are topics. Rows sum to ~1.
         """
         if getattr(self, 'corpus', None) and getattr(self, 'featureset', None):
-            identifiers = self.featureset.features.keys()
+            identifiers = list(self.featureset.features.keys())
         else:
-            identifiers = range(len(self.gcorpus))
+            identifiers = list(range(len(self.gcorpus)))
 
         self.theta = gensim_to_theta_featureset(self.model, self.gcorpus, identifiers)
 
@@ -120,12 +120,12 @@ def gensim_to_phi_featureset(model, Nwords=200, as_idx=False):
     phi : :class:`.FeatureSet`
     """
     if as_idx:
-        lookup = {t: i for i, t in model.id2word.iteritems()}
+        lookup = {t: i for i, t in list(model.id2word.items())}
     tx = lambda t: lookup[t] if as_idx else t
 
     phi = FeatureSet()
     for k in range(model.num_topics):
-        term, value = zip(*model.show_topic(k, Nwords))
+        term, value = list(zip(*model.show_topic(k, Nwords)))
         phi.add(k, Feature(list(zip([tx(t) for t in term], value))))
 
     return phi

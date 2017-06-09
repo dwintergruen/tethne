@@ -48,7 +48,7 @@ class BaseParser(object):
 
         self.encoding = 'utf-8'
 
-        for k, v in kwargs.iteritems():
+        for k, v in kwargs.items():
             setattr(self, k, v)
 
         self.open()
@@ -73,7 +73,13 @@ class BaseParser(object):
             processor_name = 'postprocess_{0}'.format(field)
             if hasattr(self.data[-1], field) and hasattr(self, processor_name):
                 getattr(self, processor_name)(self.data[-1])
-
+        
+        try:
+            dt =  self.data[-1]["date"]
+        except KeyError:
+            self.data[-1]["date"]="" #date needed!
+        except AttributeError:
+            setattr(self.data[-1],"date",0) #date needed!
 
 class IterParser(BaseParser):
     entry_class = dobject
@@ -324,7 +330,11 @@ class RDFParser(BaseParser):
 
     def open(self):
         self.graph = rdflib.Graph()
-        self.graph.parse(self.path)
+        if isinstance(self.path, list):
+            for p in self.path:
+                self.graph.parse(p)
+        else:                 
+            self.graph.parse(self.path)
         self.entries = []
 
         for element in self.entry_elements:
@@ -349,6 +359,8 @@ class RDFParser(BaseParser):
                 if p in meta_refs:  # Look for metadata fields.
                     tag = meta_fields[meta_refs.index(p)]
                     self.handle(tag, o)
+                    
+            
             self.postprocess_entry()
 
         return self.data
@@ -369,7 +381,10 @@ class RDFParser(BaseParser):
                 if tag in self.concat_fields:
                     value = ' '.join([value, data])
                 elif type(value) is list:
-                    value.append(data)
+                    if type(data) is list:
+                        value=value+data
+                    else:
+                        value.append(data)
                 elif value not in [None, '']:
                     value = [value, data]
             else:

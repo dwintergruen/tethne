@@ -8,7 +8,7 @@ from networkx import Graph
 
 PYTHON_3 = sys.version_info[0] == 3
 if PYTHON_3:
-    unicode = str
+    str = str
 
 import logging
 logging.basicConfig()
@@ -219,14 +219,14 @@ class LDAModel(Model, LDAMixin):
         self.num_iters = 0
         logger.debug('run() with k={0} for {1} iterations'.format(self.Z, self.max_iter))
 
-        prog = re.compile(u'\<([^\)]+)\>')
+        prog = re.compile('\<([^\)]+)\>')
         ll_prog = re.compile(r'(\d+)')
         p = subprocess.Popen([
                     self.mallet_bin,
                     'train-topics',
                     '--input', self.input_path,
-                    '--num-topics', unicode(self.Z),
-                    '--num-iterations', unicode(self.max_iter),
+                    '--num-topics', str(self.Z),
+                    '--num-iterations', str(self.max_iter),
                     '--output-doc-topics', self.dt,
                     '--word-topic-counts-file', self.wt,
                     '--output-model', self.om],
@@ -240,7 +240,7 @@ class LDAModel(Model, LDAMixin):
 
             # Keep track of LL/topic.
             try:
-                this_ll = float(re.findall(u'([-+]\d+\.\d+)', l)[0])
+                this_ll = float(re.findall('([-+]\d+\.\d+)', l)[0])
                 self.ll.append(this_ll)
             except IndexError:  # Not every line will match.
                 pass
@@ -249,7 +249,7 @@ class LDAModel(Model, LDAMixin):
             try:
                 this_iter = float(prog.match(l).groups()[0])
                 progress = int(100. * this_iter/self.max_iter)
-                print 'Modeling progress: {0}%.\r'.format(progress),
+                print(('Modeling progress: {0}%.\r'.format(progress)))
             except AttributeError:  # Not every line will match.
                 pass
 
@@ -307,19 +307,19 @@ def mallet_to_theta_featureset(dt_path):
     theta = FeatureSet()
 
     def _handle_with_name(line):
-        d, ident, t = int(line[0]), unicode(line[1]), line[2:]
-        return ident, Feature([(int(t[i]), float(t[i + 1])) for i in xrange(0, len(t) - 1, 2)])
+        d, ident, t = int(line[0]), str(line[1]), line[2:]
+        return ident, Feature([(int(t[i]), float(t[i + 1])) for i in range(0, len(t) - 1, 2)])
 
     def _handle_without_name(line):
         d, t = int(line[0]), line[1:]
-        return d, Feature([(int(t[i]), float(t[i + 1])) for i in xrange(0, len(t) - 1, 2)])
+        return d, Feature([(int(t[i]), float(t[i + 1])) for i in range(0, len(t) - 1, 2)])
 
     line_handler = _handle_with_name
     with open(dt_path, "rb") as f:
         i = -1
         for raw_line in f:
             line = raw_line.split()
-            print line[:10]
+            print((line[:10]))
             i += 1
             if i == 0:
                 continue     # Avoid header row.
@@ -353,14 +353,14 @@ def mallet_to_phi_featureset(wt_path):
         topics = defaultdict(list)
         for raw_line in f:
             line = raw_line.split()
-            w, term = int(line[0]), unicode(line[1])
+            w, term = int(line[0]), str(line[1])
             vocabulary[w] = term
 
             for l in line[2:]:
                 k, c = l.split(':')    # Topic and assignment count.
                 topics[int(k)].append((w, int(c)))
 
-    for k, data in topics.iteritems():
+    for k, data in list(topics.items()):
         nfeature = Feature(data).norm
 
         phi_features[k] = nfeature

@@ -3,7 +3,7 @@ import warnings
 
 from math import exp, log
 from collections import defaultdict
-from itertools import izip
+
 
 from tethne.utilities import argmin, mean, argsort
 
@@ -54,7 +54,7 @@ def plot_burstness(corpus, B, **kwargs):
 
     f = 1
     axes = {}
-    for key, value in B.iteritems():
+    for key, value in list(B.items()):
         x,y = value
         ax = fig.add_subplot(len(B),1,f)
         f+=1
@@ -73,7 +73,7 @@ def plot_burstness(corpus, B, **kwargs):
         ax.add_patch(rect)
 
         # Add a rectangle for each year, shaded according to burstness state.
-        for d in xrange(min(x), max(x)):
+        for d in range(min(x), max(x)):
             try:
                 i = x.index(d)
             except ValueError:
@@ -158,7 +158,7 @@ def plot_sigma(corpus, sigma, nodes=None, **kwargs):
         raise RuntimeError('This method requires the package matplotlib.')
 
     if nodes == 'all':
-        nodes = sigma.keys()
+        nodes = list(sigma.keys())
 
     # Display parameters.
     color = kwargs.get('color', 'red')
@@ -179,7 +179,7 @@ def plot_sigma(corpus, sigma, nodes=None, **kwargs):
                 norm_by = 0.
 
                 # Organize values in a way that makes selection easier.
-                for node, history in sigma.iteritems():
+                for node, history in list(sigma.items()):
                     years, values = history
                     if max(values) == 0.:
                         continue
@@ -189,21 +189,21 @@ def plot_sigma(corpus, sigma, nodes=None, **kwargs):
                         vals[year][node] = val
 
                 # Get the maximum values for each slice.
-                for year, node_values in vals.iteritems():
-                    indices = argsort(node_values.values())[-topn:][::-1]
-                    include += [node_values.keys()[i] for i in indices]
+                for year, node_values in list(vals.items()):
+                    indices = argsort(list(node_values.values()))[-topn:][::-1]
+                    include += [list(node_values.keys())[i] for i in indices]
                     max_value = max(node_values.values())
                     if max_value > norm_by:
                         norm_by = max_value
 
             else:   # Get topn overall.
-                maxes = [max(v[1]) for v in sigma.values() ]
+                maxes = [max(v[1]) for v in list(sigma.values()) ]
                 indices = argsort(maxes)[-topn:][::-1]
-                include = [sigma.keys()[i] for i in indices]
+                include = [list(sigma.keys())[i] for i in indices]
                 norm_by = max(maxes)
 
         # Nodes to include.
-        nodes = [node for node, values in sigma.iteritems()
+        nodes = [node for node, values in list(sigma.items())
                  if max(values[1]) > 0 and node in include]
 
 #     if fig is None: # Create a new Figure instance.
@@ -214,7 +214,7 @@ def plot_sigma(corpus, sigma, nodes=None, **kwargs):
     axes = {}
 
     # Earliest year for which we have values.
-    x_min = min([min(years) for years, values in sigma.values()])
+    x_min = min([min(years) for years, values in list(sigma.values())])
 
     for node in nodes:
         x_order = argsort(sigma[node][0])
@@ -238,7 +238,7 @@ def plot_sigma(corpus, sigma, nodes=None, **kwargs):
         ax.add_patch(rect)
 
         # Add a rectangle for each year, shaded according to burstness state.
-        for d in xrange(min(x), max(x)):
+        for d in range(min(x), max(x)):
             try:    # May not have values for all years.
                 i = x.index(d)
             except ValueError:
