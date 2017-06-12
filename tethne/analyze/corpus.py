@@ -21,6 +21,7 @@ from multiprocessing import Pool
 from tethne.utilities import argmin, mean
 import sys
 import logging
+from time import sleep
 logger = logging.getLogger("main")
 
 PYTHON_3 = sys.version_info[0] == 3
@@ -96,7 +97,7 @@ def _forward(X, s=mp.mpf(1.1), gamma=mp.mpf(1.), k=5):
                 C_values[j][t] = C(j,t)
             except:
                 logger.error("states cannot be calculates: j %s t %s"%(j,t))
-                logger.error("states cannot be calculates: %s"%repr(C_values))
+                logger.error("states cannot be calculates: %s"%repr(X))
                 C_values[j][t] = mp.mpf("inf")
                 
     # Find the optimal state sequence.
@@ -192,14 +193,14 @@ def burstness(corpus, featureset_name, features=[], k=5, topn=20, workers=5,
         # Get time-intervals between occurrences.
        
         
-        dates = [min(corpus.indices['date'].keys()) - 1]    # Pad start.
-    
+          # Pad start.
+        dates = [min(corpus.indices['date'].keys()) - 1] ###need to create dates for every!!
         for i in range(workers+1):        
             #p = (corpus, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.)  
             
             
             feature_distributions = [ corpus.feature_distribution(featureset_name,f) for f in features[i*len_per_worker:(i+1)*len_per_worker]]
-              
+           
             p = (i,dates,feature_distributions, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.) 
             
             params.append(p)
@@ -233,8 +234,8 @@ def feature_burstness_wrapper(param):
         else:
             logger.info("%s : %s of %s"%(nr,n,max_n))
         n+=1
-            
-        B[feature] = feature_burstness(None,featureset_name, feature, feature_distribution=feature_distribution, dates=dates, k=k,normalize=normalize,s =s,gamma=gamma)
+        #copy of dates necessary because date will be changes in featue_burstness!!!
+        B[feature] = feature_burstness(None,featureset_name, feature, feature_distribution=feature_distribution, dates=dates.copy(), k=k,normalize=normalize,s =s,gamma=gamma)
 
 
     # B = {feature: feature_burstness(None,featureset_name, feature, feature_distribution=feature_distribution, dates=dates, k=k,normalize=normalize,s =s,gamma=gamma) 
@@ -305,6 +306,19 @@ def feature_burstness(corpus, featureset_name, feature, k=5, normalize=True,
             dates.append(year)
             
     # Get optimum state sequence.
+    if min(X_)<0:
+        txt="-------"
+        txt+="fs,fs:Error in min (X_) < = 0!! : %s %s \n"%(featureset_name, feature)
+        txt+="years:Error in min (X_) < = 0!! : %s \n"%str(years)
+        txt+="dates:Error in min (X_) < = 0!! : %s \n"%str(dates)
+        txt+="X:Error in min (X_) < = 0!! %s \n"%str(X_)
+        txt+="-------"
+        logger.error(txt)
+        
+        raise
+    
+    
+    
     st = _forward([x*100 for x in X_], s=s, gamma=gamma, k=k)
 
     if st is None:
