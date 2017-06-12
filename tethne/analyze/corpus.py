@@ -93,8 +93,13 @@ def _forward(X, s=mp.mpf(1.1), gamma=mp.mpf(1.), k=5):
     C_values = [[0 for t in range(len(X))] for j in range(k)]
     for j in range(k):
         for t in range(len(X)):
-            C_values[j][t] = C(j,t)
-
+            try:
+                C_values[j][t] = C(j,t)
+            except:
+                logger.error("states cannot be calculates: j %s t %s"%(j,t))
+                logger.error("states cannot be calculates: %s"%repr(C_values))
+                C_values[j][t] = mp.mpf("inf")
+                
     # Find the optimal state sequence.
     #set_trace()
     try:
