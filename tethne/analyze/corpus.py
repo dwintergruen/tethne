@@ -22,6 +22,7 @@ from tethne.utilities import argmin, mean
 import sys
 import logging
 from time import sleep
+from gunicorn import workers
 logger = logging.getLogger("main")
 
 PYTHON_3 = sys.version_info[0] == 3
@@ -195,18 +196,62 @@ def burstness(corpus, featureset_name, features=[], k=5, topn=20, workers=5,
         
           # Pad start.
         dates = [min(corpus.indices['date'].keys()) - 1] ###need to create dates for every!!
-        for i in range(workers+1):        
-            #p = (corpus, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.)  
-            
-            
-            feature_distributions = [ corpus.feature_distribution(featureset_name,f) for f in features[i*len_per_worker:(i+1)*len_per_worker]]
-           
-            p = (i,dates,feature_distributions, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.) 
-            
-            params.append(p)
         
-        logger.info("starting_pool")
-        p = Pool(workers)
+        
+        
+        #gesamte anzahl aller features
+        N_ges=0
+        N_features=defaultdict(int)
+        for f in features:
+            
+            years, values = corpus.feature_distribution(featureset_name,f)
+            N_features[f]+=sum(values)
+            N_ges+=N_features[f]
+                
+        #die zeit berechnung der "burstness" hhaengt von der Häufigkeit des Auftretens ab der featueres ab.
+        #pro worker ungefähr N_ges/workers werte
+        
+        N_approx = N_ges/workers
+        
+        current_cnt=0
+        current_features=[]
+        current_worker=0
+        logger.debug("N:%s" %N_ges)
+        logger.debug("N_approx: %s" %N_approx)
+        
+        for feature in features:
+            current_features.append(feature)
+            current_cnt+=N_features[feature]
+            if current_cnt >= N_approx:
+                current_worker+=1
+                feature_distributions = [ corpus.feature_distribution(featureset_name,f) for f in current_features]
+                p = (current_worker,dates,feature_distributions, featureset_name, current_features, k, normalize, 1.1, 1.) 
+                params.append(p)
+                
+                current_cnt=0
+                current_features=[]
+                
+                
+            
+            
+        
+
+#         for i in range(workers+1):        
+#             #p = (corpus, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.)  
+#             
+#             
+#             
+#             #die zeit berechnung der "burstness" hhaengt von der Häufigkeit des Auftretens ab der featueres ab.
+#             feature_distributions = [ corpus.feature_distribution(featureset_name,f) for f in features[i*len_per_worker:(i+1)*len_per_worker]]
+#            
+#             p = (i,dates,feature_distributions, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.) 
+#             
+#             params.append(p)
+        
+        
+        
+        logger.info("starting_pool (%s workers"%current_worker)
+        p = Pool(current_worker)
        
         Bs = p.map(feature_burstness_wrapper,params)
         
