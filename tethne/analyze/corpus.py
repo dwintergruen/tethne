@@ -20,7 +20,6 @@ from multiprocessing import Pool
 
 from tethne.utilities import argmin, mean
 import sys
-from sympy.physics.vector.printing import params
 import logging
 logger = logging.getLogger("main")
 
