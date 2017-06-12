@@ -5,13 +5,10 @@ import string
 import copy
 
 import sys
-PYTHON_3 = sys.version_info[0] == 3
-if PYTHON_3:
-    unicode = str
-    from html.parser import HTMLParser  # Python 3.x
-    xrange = range
-else:
-    from HTMLParser import HTMLParser   # Python 2.x
+
+unicode = str
+from html.parser import HTMLParser  # Python 3.x
+xrange = range
 
 
 
@@ -52,8 +49,8 @@ def number(value):
             return value
 
 
-def tokenize(s):
-    return s.lower()
+#def tokenize(s):
+#    return s.lower()
 
 
 class MLStripper(HTMLParser):
@@ -133,11 +130,9 @@ def _strip_punctuation(s):
     """
     Removes all punctuation characters from a string.
     """
-    if type(s) is str and not PYTHON_3:    # Bytestring (default in Python 2.x).
-        return s.translate(string.maketrans("",""), string.punctuation)
-    else:                 # Unicode string (default in Python 3.x).
-        translate_table = dict((ord(char), u'') for char in u'!"#%\'()*+,-./:;<=>?@[\]^_`{|}~')
-        return s.translate(translate_table)
+                   # Unicode string (default in Python 3.x).
+    translate_table = dict((ord(char), u'') for char in u'!"#%\'()*+,-./:;<=>?@[\]^_`{|}~')
+    return s.translate(translate_table)
 
 def _strip_numbers(s):
     """

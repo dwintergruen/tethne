@@ -136,7 +136,7 @@ class GraphCollection(dict):
         """
         if name in self:
             raise ValueError("{0} exists in this GraphCollection".format(name))
-        elif hasattr(self, str(name)):
+        elif hasattr(self, "%s"%name):
             raise ValueError("Name conflicts with an existing attribute")
 
         indexed_graph = self.index(name, graph)
@@ -148,6 +148,8 @@ class GraphCollection(dict):
 
         # Add all node attributes to the `master_graph`.
         for n, attrs in indexed_graph.nodes(data=True):
+            if not n in self.master_graph.node:
+                self.master_graph.add_node(n)
             for k,v in list(attrs.items()):
                 if k not in self.master_graph.node[n]:
                     self.master_graph.node[n][k] = {}

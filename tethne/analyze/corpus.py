@@ -13,21 +13,25 @@ Methods for analyzing :class:`.Corpus` objects.
 import networkx as nx
 import warnings
 
+from mpmath import mp
 from math import exp, log
 from collections import defaultdict
-
+from multiprocessing import Pool
 
 from tethne.utilities import argmin, mean
-
 import sys
+from sympy.physics.vector.printing import params
+import logging
+logger = logging.getLogger("main")
+
 PYTHON_3 = sys.version_info[0] == 3
-if PYTHON_3:
+if PYTHON_3 == 3:
     str = str
     xrange = range
 
 
-
-def _forward(X, s=1.1, gamma=1., k=5):
+def _forward(X, s=mp.mpf(1.1), gamma=mp.mpf(1.), k=5):
+    cnt=[0,0]
     """
     Forward dynamic algorithm for burstness automaton HMM, from `Kleinberg
     (2002) <http://www.cs.cornell.edu/home/kleinber/bhs.pdf>`_.
@@ -53,34 +57,37 @@ def _forward(X, s=1.1, gamma=1., k=5):
         Optimal state sequence.
     """
     X = list(X)
-
+    T = sum(X)
+    n = len(X)
+    
     def alpha(i):
-        return (n/T)*(s**i)
+        return mp.mpf(n/T)*mp.mpf(s**i)
 
     def tau(i, j):
         if j > i:
-            return (j-i)*gamma*log(n)
-        return 0.
+            return mp.mpf(j-i)*gamma*mp.ln(mp.mpf(n))
+        return mp.mpf(0.)
 
     def f(j, x):
         #print("(J,X):",j,x,n,alpha(j))
         #print("ALPHA:",alpha(j) * exp(-1. * alpha(j) * x))
-        return alpha(j) * exp(-1. * alpha(j) * x)
+        return mp.mpf(alpha(j)) * mp.exp(mp.mpf(-1.) * alpha(j) * x)
 
     def C(j, t):
+        
         if j == 0 and t == 0:
-            return 0.
+            return mp.mpf(0.)
         elif t == 0:
-            return float("inf")
+            return mp.mpf("inf")
 
         C_tau = min([C_values[l][t-1] + tau(l, j) for l in range(k)])
-        try:
-            return (-1. * log(f(j,X[t]))) + C_tau
-        except:
-            return -1. * float("inf") #can happen if f-> 0
+        #try:
+        return (mp.mpf(-1.) * mp.ln(mp.mpf(f(j,X[t])))) + C_tau
+        #except:
+        #    cnt[1]+=1
+        #    return Decimal(-1.) * Decimal("inf") #can happen if f-> 0
 
-    T = sum(X)
-    n = len(X)
+   
 
     # C() requires default (0) values, so we construct the "array" in advance.
     C_values = [[0 for t in range(len(X))] for j in range(k)]
@@ -89,7 +96,13 @@ def _forward(X, s=1.1, gamma=1., k=5):
             C_values[j][t] = C(j,t)
 
     # Find the optimal state sequence.
-    states = [argmin([c[t] for c in C_values]) for t in range(n)]
+    #set_trace()
+    try:
+        states = [argmin([c[t] for c in C_values]) for t in range(n)]
+    except:
+        logger.error("states cannot be calculates: %s"%repr(C_values))
+        states = None
+        
     return states
 
 def _top_features(corpus, feature, topn=20, perslice=False, axis='date'):
@@ -97,7 +110,7 @@ def _top_features(corpus, feature, topn=20, perslice=False, axis='date'):
                   DeprecationWarning)
     return corpus.top_features(feature, topn=topn, perslice=perslice)
 
-def     burstness(corpus, featureset_name, features=[], k=5, topn=20,
+def burstness(corpus, featureset_name, features=[], k=5, topn=20, workers=5,
               perslice=False, normalize=True, **kwargs):
     """
     Estimate burstness profile for the ``topn`` features (or ``flist``) in
@@ -154,13 +167,79 @@ def     burstness(corpus, featureset_name, features=[], k=5, topn=20,
         else:
             features = list(zip(*T))[0]
 
-    B = {feature: feature_burstness(corpus, featureset_name, feature, k=k,
-                                    normalize=normalize, **kwargs)
-         for feature in features}
+
+    if workers == 1:
+        logger.info("single process")
+        B = {feature: feature_burstness(corpus, featureset_name, feature, k=k,
+                                        normalize=normalize, **kwargs) for feature in features}
+             
+    else:
+        logger.info("%s processes"%workers)
+
+        params=[]
+        len_per_worker = int(len(features)/workers)
+    
+        if 'date' not in corpus.indices:
+            corpus.index('date')
+    
+        if featureset_name not in corpus.features:
+            corpus.index_feature(featureset_name)
+        
+        # Get time-intervals between occurrences.
+       
+        
+        dates = [min(corpus.indices['date'].keys()) - 1]    # Pad start.
+    
+        for i in range(workers+1):        
+            #p = (corpus, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.)  
+            
+            
+            feature_distributions = [ corpus.feature_distribution(featureset_name,f) for f in features[i*len_per_worker:(i+1)*len_per_worker]]
+              
+            p = (i,dates,feature_distributions, featureset_name, features[i*len_per_worker:(i+1)*len_per_worker], k, normalize, 1.1, 1.) 
+            
+            params.append(p)
+        
+        logger.info("starting_pool")
+        p = Pool(workers)
+       
+        Bs = p.map(feature_burstness_wrapper,params)
+        
+        B={}
+        for tmp_B in Bs:
+            B.update(tmp_B)
+            
+      
     return B
 
+
+def feature_burstness_wrapper(param):
+    
+    nr, dates, feature_distributions, featureset_name, features, k, normalize, s, gamma = param
+
+    B = {}
+    max_n = len(features)
+    n=0
+    #print("%s : %s of %s"%(nr,n,max_n))
+            
+    for feature,feature_distribution in  zip(features,feature_distributions):
+        if max_n > 10:
+            if n/3 == int(n/3):
+                logger.info("%s : %s of %s"%(nr,n,max_n))
+        else:
+            logger.info("%s : %s of %s"%(nr,n,max_n))
+        n+=1
+            
+        B[feature] = feature_burstness(None,featureset_name, feature, feature_distribution=feature_distribution, dates=dates, k=k,normalize=normalize,s =s,gamma=gamma)
+
+
+    # B = {feature: feature_burstness(None,featureset_name, feature, feature_distribution=feature_distribution, dates=dates, k=k,normalize=normalize,s =s,gamma=gamma) 
+    #     for feature,feature_distribution in  zip(features,feature_distributions)}
+        
+    return  B
+     
 def feature_burstness(corpus, featureset_name, feature, k=5, normalize=True,
-                      s=1.1, gamma=1., **slice_kwargs):
+                      s=1.1, gamma=1., dates=None ,feature_distribution=None, **slice_kwargs):
     """
     Estimate burstness profile for a feature over the ``'date'`` axis.
 
@@ -181,17 +260,27 @@ def feature_burstness(corpus, featureset_name, feature, k=5, normalize=True,
     """
 
 
-    if featureset_name not in corpus.features:
-        corpus.index_feature(featureset_name)
+    if corpus is not None:
+        if featureset_name not in corpus.features:
+            corpus.index_feature(featureset_name)
+        
+    if dates is None:
+        if 'date' not in corpus.indices:
+            corpus.index('date')
+    
+        # Get time-intervals between occurrences.
+       
+        
+        dates = [min(corpus.indices['date'].keys()) - 1]    # Pad start.
+    
+    X_ = [mp.mpf(1.)]
 
-    if 'date' not in corpus.indices:
-        corpus.index('date')
-
-    # Get time-intervals between occurrences.
-    dates = [min(corpus.indices['date'].keys()) - 1]    # Pad start.
-    X_ = [1.]
-
-    years, values = corpus.feature_distribution(featureset_name, feature)
+    
+    if feature_distribution is None:
+        years, values = corpus.feature_distribution(featureset_name, feature)
+    else:
+        years, values = feature_distribution
+        
     for year, N in zip(years, values):
         if N == 0:
             continue
@@ -199,20 +288,24 @@ def feature_burstness(corpus, featureset_name, feature, k=5, normalize=True,
         if N > 1:
             if year == dates[-1] + 1:
                 for n in range(int(N)):
-                    X_.append(1./N)
+                    X_.append(mp.mpf(1.)/mp.mpf(N))
                     dates.append(year)
             else:
-                X_.append(float(year - dates[-1]))
+                X_.append(mp.mpf(year - dates[-1]))
                 dates.append(year)
                 for n in range(int(N) - 1):
-                    X_.append(1./(N - 1))
+                    X_.append(mp.mpf(1.)/mp.mpf(N - 1))
                     dates.append(year)
         else:
-            X_.append(float(year - dates[-1]))
+            X_.append(mp.mpf(year - dates[-1]))
             dates.append(year)
-
+            
     # Get optimum state sequence.
     st = _forward([x*100 for x in X_], s=s, gamma=gamma, k=k)
+
+    if st is None:
+        logger.error("NO state for: %s %s"%(feature,featureset_name))
+        return None
 
     # Bin by date.
     A = defaultdict(list)
