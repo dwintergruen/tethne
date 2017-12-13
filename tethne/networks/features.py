@@ -27,13 +27,13 @@ def _nPMI(p_ij, p_i, p_j):
 
 
 def feature_cooccurrence(corpus, featureset_name, min_weight=1,
-                         filter=lambda f, v, c, dc: True):
+                         flt=lambda f, v, c, dc: True):
     return cooccurrence(corpus, featureset_name, min_weight=min_weight,
-                        filter=filter)
+                        flt=flt)
 
 
 def mutual_information(corpus, featureset_name, min_weight=0.9,
-                       filter=lambda f, v, c, dc: True):
+                       flt=lambda f, v, c, dc: True):
     """
     Generates a graph of features in ``featureset`` based on normalized
     `pointwise mutual information (nPMI)
@@ -49,7 +49,7 @@ def mutual_information(corpus, featureset_name, min_weight=0.9,
     """
 
     graph = feature_cooccurrence(corpus, featureset_name, min_weight=1,
-                                 filter=filter)
+                                 flt=flt)
     mgraph = type(graph)()
     keep_nodes = set()
 
@@ -74,4 +74,4 @@ def keyword_cooccurrence(corpus, min_weight=1, filter=lambda f, v, c, dc: True):
                   'feature_cooccurrence with "authorKeywords" or '+
                   '"keywordsPlus" instead.', DeprecationWarning)
     return feature_cooccurrence(corpus, 'authorKeywords',
-                                min_weight=min_weight, filter=filter)
+                                min_weight=min_weight, flt=flt)

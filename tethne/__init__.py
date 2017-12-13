@@ -16,7 +16,6 @@ models, and social influence models.
    writers
 
 """
-
 from tethne.classes.paper import Paper
 from tethne.classes.corpus import Corpus
 from tethne.classes.streaming import StreamingCorpus

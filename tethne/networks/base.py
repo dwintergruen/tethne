@@ -1,7 +1,6 @@
 import networkx as nx
 from itertools import combinations
 from collections import Counter, defaultdict
-
 from tethne.utilities import _iterable
 from tethne import Corpus, FeatureSet, StructuredFeatureSet, StreamingCorpus
 
@@ -43,6 +42,9 @@ def cooccurrence(corpus_or_featureset, featureset_name=None, min_weight=1,
     A network of feature elements linked by their joint occurrence in papers.
     """
 
+    if filter is not None:#backwards compatible later filter is used instead of flt
+        flt=filter 
+    
     if not flt:
         flt = lambda f, v, c, dc: dc >= min_weight
 
